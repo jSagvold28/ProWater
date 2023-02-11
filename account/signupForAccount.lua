@@ -1,4 +1,5 @@
 local function getUserInfo()
+
     print("Name:")
     local name = io.read()
 
@@ -20,11 +21,13 @@ local function getUserInfo()
     local goalForDrinkingWater = io.read()
 
     return name, email, password, age, weight, goalForDrinkingWater
+
 end
 
 local name, email, password, age, weight, goalForDrinkingWater = getUserInfo()
 
 local function validateInformationAndWriteToFile(name, email, password, age, weight, goalForDrinkingWater)
+
     print("Validate that the information below is correct:")
     print("")
 
@@ -38,6 +41,7 @@ local function validateInformationAndWriteToFile(name, email, password, age, wei
 
     print("Is the information above corrrect?")
     print("Type 'yes' to create an account.")
+    
 end
 
 validateInformationAndWriteToFile(name, email, password, age, weight, goalForDrinkingWater)
@@ -48,7 +52,7 @@ if input == "yes" then
 
     local function createAccount()
 
-        local file = io.open("accountInformation.txt", "a")
+        local file = io.open("account.txt", "a")
 
         os.execute("sleep 0.05")
         print("Creating account...")
@@ -67,12 +71,8 @@ if input == "yes" then
         os.execute("sleep 0.04")
 
         print("Account created with no errors!")
-    else
-        print("Account was not created due to an: error")
-    end
     end
     createAccount()
+else
+    print("Account was not created due to an error")
 end
-
-
--- have a if statnement if the information is correc thtat it makes the account
