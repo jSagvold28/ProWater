@@ -12,12 +12,12 @@ Prerequisites
 
 ## Instilation Steps
 
-1. Clone the repo onto your machine
+### 1. Clone the repo onto your machine
 
 ``git clone https://github.com/jSagvold28/ProWater.git
 ``
 
-2. Change into the ProWater directory:
+## 2. Change into the ProWater directory:
 ``cd ProWater''
 
 ### Usage
