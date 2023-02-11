@@ -7,6 +7,9 @@ local ouncesConsumed = io.read()
 print("Total Calories:")
 local totalCaloriesConsumed = io.read()
 
+print("Rate the drink (1-5)")
+local rateTheDrink = io.read()
+
 local function validateInformationAndWriteToFile()
 
     print("Is the information below correct?")
@@ -15,6 +18,7 @@ local function validateInformationAndWriteToFile()
     print("Beverage: " .. beverageConsumed)
     print("Ounces: " .. ouncesConsumed .. "oz")
     print("Total Calories: " .. totalCaloriesConsumed .. "cal")
+    print("Rate drink: " .. rateTheDrink)
     
     print("")
     print("Type 'yes' if the information above is correct.")
@@ -25,11 +29,12 @@ local function validateInformationAndWriteToFile()
 
         local function writeToFile()
 
-            local file = io.open("basicWaterLog", "w")
+            local file = io.open("basicWaterLog.txt", "w")
 
-            file:write("Beverage: " .. beverageConsumed .. "\n")
-            file:write("Total Ounces: " .. ouncesConsumed .. "oz" .. "\n")
-            file:write("Total calories: " .. totalCaloriesConsumed .. "cal" .. "\n")
+            io.write("Beverage: " .. beverageConsumed .. "\n")
+            io.write("Ounces: " .. ouncesConsumed .. "oz" .. "\n")
+            io.write("Total Calories: " .. totalCaloriesConsumed .. "cal" .. "\n")
+            io.write("Rate drink: " .. rateTheDrink .. "\n")
             
             file:close()
         end
