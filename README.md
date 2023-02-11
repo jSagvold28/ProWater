@@ -18,7 +18,7 @@ Prerequisites
 ``
 
 ## 2. Change into the ProWater directory:
-``cd ProWater''
+``cd ProWater``
 
 ### Usage
 
