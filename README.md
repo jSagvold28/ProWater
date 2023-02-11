@@ -14,4 +14,25 @@ Prerequisites
 
 1. Clone the repo onto your machine
 
-``git ``
+``git clone https://github.com/jSagvold28/ProWater.git
+``
+
+2. Change into the ProWater directory:
+``cd ProWater''
+
+### Usage
+
+``lua pro_water.lua``
+
+## Contributing to this project
+
+This is a 100% open source project. Contriubtions are allways welcome! 
+
+If you wouldl like to contribute to the code base please fork the repository and create a PR (pull request)
+
+
+## Bugs:
+
+If you do enocunter a bug that is in production please report that into the Issues tab.
+
+
