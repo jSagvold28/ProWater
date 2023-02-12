@@ -3,6 +3,8 @@ local beverageConsumed = io.read()
 
 print("Ounces consumed:")
 local ouncesConsumed = io.read()
+ouncesConsumed = ouncesConsumed 
+print(ouncesConsumed)
 
 print("Total Calories:")
 local totalCaloriesConsumed = io.read()
@@ -42,3 +44,11 @@ local function validateInformationAndWriteToFile()
     end
 end
 validateInformationAndWriteToFile()
+
+local function displayRemaningOunces()
+    local targetOunces = 32
+    local remaningOunces = targetOunces - ouncesConsumed
+
+    print("You have dranken: " .. ouncesConsumed .. "oz out of 32oz" .. "You still need to drink: " .. remaningOunces)
+end
+displayRemaningOunces()
