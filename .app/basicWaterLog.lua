@@ -48,7 +48,17 @@ validateInformationAndWriteToFile()
 local function displayRemaningOunces()
     local targetOunces = 32
     local remaningOunces = targetOunces - ouncesConsumed
+    local hour = os.date("%H")
+    local minute = os.date("%M")
 
-    print("You have dranken: " .. ouncesConsumed .. "oz out of 32oz" .. "You still need to drink: " .. remaningOunces)
+    if hour == "00" and minute == "00" then
+        remaningOunces = targetOunces
+    end
+
+    if remaningOunces < 0 then
+        print("Congratulations, you have drank a total of: " .. ouncesConsumed .. "oz")
+    else
+        print("You have consumed: " .. ouncesConsumed .. " out of 32oz you still need to drink: " .. remaningOunces .. " oz " .. "You can still do it!")
+    end
 end
 displayRemaningOunces()
